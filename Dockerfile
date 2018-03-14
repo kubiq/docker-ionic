@@ -4,9 +4,7 @@ MAINTAINER Jakub Pištěk <mail@jakubpistek.cz>
 
 ENV IONIC_VERSION 3.19.1
 
-RUN echo $ANDROID_HOME
-
-COPY licences /opt/android/
+COPY licences $ANDROID_HOME
 
 RUN apt-get update && apt-get install -y git bzip2 openssh-client && \
     npm i -g --unsafe-perm ionic@${IONIC_VERSION} && \
